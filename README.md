@@ -17,7 +17,7 @@ After the module is installed, you can trigger macros on other's client.
 ### Prompt another player with a dialog macro.
 Let's say you have a simple true/false dialog macro, like this below, and you want another player to decide whether this is true or false for you.
 
-```
+```javascript
 let result = await Dialog.confirm({
     title: "Do you want this to be true?",
     content: "Pick a button to your heart's content and get true/false return value for testing.",
@@ -35,7 +35,7 @@ return result;
 
 Find their player id, name your true or false macro, and try the following macro here.
 
-```
+```javascript
 let playerId, macroName;
 
 playerId = "uV3Z8JI1ck0NiVmm"; // Define a player id.
