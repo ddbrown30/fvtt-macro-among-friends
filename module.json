@@ -45,5 +45,6 @@
   ],
   "socket": true,
   "license": "LICENSE",
-  "readme": "README.md"
+  "readme": "README.md",
+  "manifest": "https://raw.githubusercontent.com/Krigsmaskine/fvtt-macro-among-friends/main/module.json"
 }
