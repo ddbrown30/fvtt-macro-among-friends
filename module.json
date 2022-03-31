@@ -44,8 +44,8 @@
     }
   ],
   "socket": true,
-  "license": "LICENSE",
-  "readme": "README.md",
+  "license": "https://github.com/Krigsmaskine/fvtt-macro-among-friends/blob/main/LICENSE",
+  "readme": "https://github.com/Krigsmaskine/fvtt-macro-among-friends/blob/main/README.md",
   "manifest": "https://github.com/Krigsmaskine/fvtt-macro-among-friends/releases/download/latest/module.json",
   "download": "https://github.com/Krigsmaskine/fvtt-macro-among-friends/releases/download/latest/module.zip"
 }
