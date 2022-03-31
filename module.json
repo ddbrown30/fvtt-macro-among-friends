@@ -1,0 +1,48 @@
+{
+  "name": "macro-among-friends",
+  "title": "Macro Among Friends",
+  "description": "Simple module that uses socketlib to allows you to have player A execute a macro for player B.",
+  "version": "0.0.1",
+  "library": "false",
+  "manifestPlusVersion": "1.0.0",
+  "minimumCoreVersion": "9",
+  "compatibleCoreVersion": "9",
+  "authors": [
+    {
+      "name": "Krig",
+      "discord": "Krigsmaskine#8165"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "socketlib",
+      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+    }
+
+  ],
+  "conflicts": [
+    
+  ],
+  "esmodules": [
+    "scripts/module.js"
+  ],
+  "scripts": [
+    "scripts/lib/lib.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "socket": true,
+  "url": "URL to host site",
+  "manifest": "manifest link to download",
+  "download": "direct download zip",
+  "license": "LICENSE",
+  "readme": "README.md"
+}
