@@ -17,6 +17,10 @@
     {
       "name": "socketlib",
       "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+    },
+    {
+      "name": "advanced-macros",
+      "manifest": "https://github.com/League-of-Foundry-Developers/fvtt-advanced-macros/blob/main/module.json"
     }
 
   ],
@@ -40,9 +44,6 @@
     }
   ],
   "socket": true,
-  "url": "URL to host site",
-  "manifest": "manifest link to download",
-  "download": "direct download zip",
   "license": "LICENSE",
   "readme": "README.md"
 }
