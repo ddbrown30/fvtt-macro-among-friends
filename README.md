@@ -14,24 +14,39 @@ The module is a small module, that truthfully could be achieved by just about an
 After the module is installed, you can trigger macros on other's client. 
 
 ## Examples
-### Ask another player whether this is true or false.
+### Prompt another player with a dialog macro.
 Let's say you have a simple true/false dialog macro, like this below, and you want another player to decide whether this is true or false for you.
 
-<code>let result = await Dialog.confirm({
+```
+let result = await Dialog.confirm({
     title: "Do you want this to be true?",
     content: "Pick a button to your heart's content and get true/false return value for testing.",
-    1: () => {
+    yes: () => {
       return 1;
     },
-    2: () => {
+    no: () => {
       return 2;
     },
     defaultYes: false,
   });
 
-return result;</code>
+return result;
+```
 
+Find their player id, name your true or false macro, and try the following macro here.
 
+```
+let playerId, macroName;
+
+playerId = "uV3Z8JI1ck0NiVmm"; // Define a player id.
+macroName = "True or False"; // Define a macro name.
+
+let result = await MAF.executeAsUser("macro", playerId, macroName); // Await the result and remember to include a return in your macro, if you so wish a return value.
+
+console.log(result); // To verify it has a return value.
+```
+
+You will find that the player by your chosen player id will have the true or false macro executed on their end, and you will receive the result through your console!
 
 ## Changelog
 31-03-2022: First release uploaded to Github.
