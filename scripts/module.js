@@ -1,16 +1,23 @@
-let socketMAF;
-const MAF = "macro-among-friends";
+const NAME = "macro-among-friends";
 
-Hooks.once("socketlib.ready", () => {
-    socketMAF = socketlib.registerModule(MAF);
-    socketMAF.register("macro",runMacro)
-    window.MAF = socketMAF;
+Hooks.on("init", () => {
+    game.maf = game.maf ?? {};
+    game.maf.runMacro = runMacro;
 });
 
+Hooks.once("socketlib.ready", () => {
+    game.maf = game.maf ?? {};
 
-// Function to execute a macro on a client. Provide a macro name.
+    game.maf.socket = socketlib.registerModule(NAME);
+    game.maf.socket.register("executeMacro", executeMacro);
+});
+
 async function runMacro(macroName) {
-    const macroToRun = game.macros.getName(macroName);
+    await game.maf.socket.executeAsGM("executeMacro", macroName);
+}
+
+async function executeMacro(macroName) {
+    const macroToRun = game.macros.get(macroName);
     let macroResult = await macroToRun.execute();
     return macroResult;
 };
